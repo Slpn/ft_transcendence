@@ -1,0 +1,32 @@
+import { UserService } from 'src/user/user.service';
+import { ChannelService } from './channel.service';
+export declare class ChannelController {
+    private channelService;
+    private userService;
+    constructor(channelService: ChannelService, userService: UserService);
+    createChannel(request: any, res: any): Promise<void>;
+    getChannel(request: any, res: any, channelId: any): Promise<any>;
+    getChannels(request: any, res: any): Promise<any>;
+    getPublicChannels(res: any): Promise<any>;
+    getPrivateChannels(id: any, request: any, res: any): Promise<any>;
+    getProtectedChannels(request: any, res: any): Promise<any>;
+    getChannelOwner(res: any, channel_id: any): Promise<any>;
+    getChannelAdmins(res: any, channel_id: any): Promise<any>;
+    getBannedUsers(res: any, channel_id: any): Promise<any>;
+    changeName(request: any, res: any, channel_id: any): Promise<void>;
+    getMutedUsers(res: any, channel_id: any): Promise<any>;
+    listsUserInChannel(channelId: any, request: any, res: any): Promise<any>;
+    checkPassword(request: any, res: any): Promise<any>;
+    promoteToAdmin(request: any, res: any): Promise<any>;
+    demoteToUser(request: any, res: any): Promise<any>;
+    getBanByUserAndChannel(id: any, request: any, res: any): Promise<any>;
+    muteUser(request: any, res: any): Promise<void>;
+    unmuteUser(request: any, res: any): Promise<void>;
+    banUser(request: any, res: any): Promise<void>;
+    checkUnbanUser(id: any, request: any, res: any): Promise<void>;
+    unbanUser(request: any, res: any): Promise<void>;
+    resetPassword(request: any, res: any): Promise<void>;
+    changePassword(request: any, res: any): Promise<void>;
+    switchToPrivate(request: any, res: any): Promise<void>;
+    switchToPublic(request: any, res: any): Promise<void>;
+}
