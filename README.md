@@ -29,5 +29,5 @@ docker-compose up --build
 
 Then you can log at
 ```
-http::localhost:3000
+localhost:3000
 ```
